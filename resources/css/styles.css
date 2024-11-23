@@ -1,0 +1,386 @@
+/* External Stylesheet */
+:root {
+  --main-color-1: #dcf0b7;
+  --main-color-2: #dddcff;
+  --popup-color-1: #cde894;
+  --popup-color-2: #b3b1fd;
+  --background-color: #8985fb;
+  --outline-color: #5c5aa7;
+  --word-color-1: #2b2a59;
+  --word-color-2: #6d1dbd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: white;
+}
+
+.menu ul {
+  /* .menu chosen for specificity incase future navbars needed similar changes  */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: var(--outline-color) solid 3px;
+}
+
+.menu > ul {
+  display: flex;
+  background-color: var(--main-color-1);
+}
+
+.menu > ul > li {
+  position: relative;
+}
+
+.menu a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: var(--word-color-1);
+}
+
+.menu a:hover {
+  background-color: var(--main-color-2);
+}
+
+/* Submenu Styles */
+.submenu {
+  /* .submenu chosen to specify it as a dropdown instead of being shown in navbar */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--main-color-1);
+  display: none;
+  min-width: 200px;
+}
+
+.submenu li a {
+  color: var(--word-color-1);
+  padding: 10px 15px;
+}
+
+.submenu li a:hover {
+  background-color: var(--main-color-2);
+}
+
+/* Show submenu on hover */
+.menu li:hover .submenu {
+  display: block;
+}
+
+/* General */
+.footer-style {
+  /* .footer-style clarifies style needed specifically for select footer tags, but not all */
+  text-align: center;
+  border-top: solid 3px;
+  padding-top: 30px;
+  border-color: var(--popup-color-2);
+  background-color: var(--main-color-2);
+  padding-bottom: 90px;
+  color: var(--word-color-2);
+}
+
+/* index */
+#index-h1 {
+  /* #index-h1 used as specific h1 needed a background image to complete lesson task */
+  background-image: url("../images/image-6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--word-color-1);
+  text-align: center;
+  padding: 100px;
+  margin-top: 0;
+}
+
+.index-h2 {
+  /* .index-h2 used for broad use on multiple h2's that need styling specifically in the index file */
+  color: var(--word-color-1);
+}
+
+.index-p {
+  /* .index-p class used for same purposes as .index-h2 */
+  color: var(--main-color-1);
+}
+
+#index-ul {
+  /* Only one #index-ul was expected so an ID was used instead of class */
+  list-style: none;
+  color: var(--word-color-1);
+  text-align: center;
+}
+
+#index-main {
+  /* There can only be one main element, but #index-main helps specify the page that we want to target */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#index-main .card-help {
+  /* #index-main was paired with .card-help to specify that we want to target the cards in the main in the index page */
+  max-width: 75%;
+  min-width: 60%;
+}
+
+/* help */
+#header-help {
+  /* This ID specifies that we want to target a header for help only, but was also used on the goal page as it helped format */
+  color: var(--word-color-1);
+  text-align: center;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--word-color-1);
+}
+
+#help-description {
+  /* Helped specify the color for a singular specific section */
+  color: black;
+}
+
+.card-help p {
+  color: var(--word-color-2);
+}
+
+.container-help {
+  /* .container-help was used to format containers in the help section, as the original plan was to use multiple */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-help {
+  height: auto;
+  background-color: var(--main-color-1);
+  border: var(--popup-color-1) solid 3px;
+  padding: 10px;
+  margin: 30px;
+  display: block;
+  width: 45%;
+  border-radius: 10px;
+}
+
+.card-help h2,
+p,
+a {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 500px;
+  background-color: var(--main-color-2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+}
+
+.form-box {
+  /* .form-box was used to contain the form, as multiple are expected to be made in the future */
+  width: 90%;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+form .form-group {
+  /* form-group was made to contain inner info inside the form */
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.widefield {
+  /* .widefield was made to ensure the contents fill the container 100% */
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+form button {
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+.footer-message {
+  /* .footer-message was planned to be used to style all the footers, but was only used for 2 as needed */
+  margin-top: 20px;
+  text-align: center;
+  color: #333;
+  font-size: 14px;
+}
+
+#what-item {
+  /* #what-item was used to clarify the item picking title would not change color from other css changes */
+  color: black;
+}
+
+.price-table {
+  /* .pricing-table was used as it will be displayed multiple times in the future when I have gathered more web development skills */
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  background: var(--main-color-2);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.price-table h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.price-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.price-table th,
+.price-table td {
+  border: 1px solid;
+  border-color: var(--popup-color-2);
+  padding: 12px;
+  text-align: center;
+}
+
+.price-table th {
+  background-color: var(--main-color-2);
+  color: #fff;
+  font-weight: 600;
+}
+
+.price-table td {
+  color: #555;
+}
+
+/* goal */
+.card-goal img {
+  /* .card-goal was used to clarify the cards in the goal page have been selected */
+  width: auto;
+  max-height: 300px;
+  margin: auto;
+}
+
+.card-goal {
+  background-color: var(--main-color-1);
+  border: var(--popup-color-1) solid 3px;
+  padding: 10px;
+  margin: 30px;
+  display: flex;
+  width: 90%;
+  border-radius: 10px;
+  color: var(--word-color-2);
+  flex: wrap;
+}
+
+.goal-content {
+  /* .goal-content was used to separate the content of the cards from the img for a nice split look */
+  text-align: center;
+  width: 60%;
+}
+
+#help-description {
+  /* #help-description was specified with an ID to make sure it stood out */
+  margin: 25px 150px;
+  border: solid 5px;
+  border-color: var(--popup-color-2);
+  padding: 10px;
+}
+
+/* ALL ACCESS ID's WERE TO STRENGTHEN THE ACCESSABILITY OF THE ACCESS SECTION */
+#access-h3 {
+  text-align: center;
+}
+
+#access-p {
+  color: var(--word-color-1);
+}
+
+#access-ul {
+  text-align: center;
+  color: var(--word-color-1);
+  list-style: none;
+}
+
+/* research */
+.section-research {
+  /* .section-research was used to clarify the research section but as a broad tool to be used later */
+  width: 90%;
+  height: auto;
+  border: solid black 1px;
+  background-color: var(--main-color-1);
+  margin: 5%;
+  border-radius: 15px;
+  text-align: center;
+  padding: 5px 30px 50px;
+}
+
+#research p,
+h1,
+h2,
+h3,
+small,
+a {
+  /* #research helped specify which page was chosen */
+  color: var(--word-color-2);
+}
+
+#research h2 {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-research h2 {
+  color: var(--word-color-2);
+}
+
+/* 404 */
+#404 {
+  /* #404 helped specify which page was chosen */
+  color: var(--word-color-1);
+}

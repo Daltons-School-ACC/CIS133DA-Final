@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <!-- Has Table & Form -->
+  <!-- FINISHED -->
+  <head>
+    <title>Rent School Property</title>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Dalton Redden" />
+    <meta name="description" content="Harvest Hope will pave the way for children's food security">
+    <meta name="keywords" content="food security, child care, health, farming, non-profit">
+    <link rel="stylesheet" href="../resources/css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Start -->
+    <nav class="menu">
+      <ul>
+        <li><a href="../index.html">Homepage</a></li>
+        <li><a href="goal.html">Our Goal</a></li>
+        <li class="selected">
+          <a href="help.html">How You Can Help</a>
+          <ul class="submenu">
+            <li><a href="./volunteer.html">Volunteer to Teach</a></li>
+            <li><a href="./rent.html">Rent School Property</a></li>
+            <li><a href="./work.html">Work on Farms</a></li>
+            <li><a href="./patnership.html">Partnership Opportunities</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="research.html">Research</a>
+          <ul class="submenu">
+            <li><a href="../html/research.html#land">Land Leasing</a></li>
+            <li><a href="../html/research.html#problem">Problem Sources</a></li>
+            <li><a href="../html/research.html#school">School Farming</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- Navigation End -->
+    <!-- Main Start -->
+    <main>
+      <!-- Pricing Table Start -->
+      <div class="price-table">
+        <h1>Pricing Sheet</h1>
+        <table>
+          <th>
+            <td>School Land</td>
+            <td>School Tools</td>
+            <td>School Classrooms</td>
+          </th>
+          <tr>
+            <td>Amount Left</td>
+            <td>25 Acres Left</td>
+            <td>Call for a Quote</td>
+            <td>4 Rooms Left</td>
+          </tr>
+          <tr>
+            <td>Cost Per</td>
+            <td>$4,000 per acre</td>
+            <td>Call for Quote</td>
+            <td>100$ per Hour per Room</td>
+          </tr>
+        </table>
+      </div>
+      <!-- Pricing Table End -->
+      <form
+      action="https://secure.riosalado.edu/cis-course-resources/postscript.aspx"
+      method="post"
+      target="_blank"
+    >
+      <div class="form-box">
+        <h2>Rental Request Form</h2>
+
+        <div class="form-group">
+          <label for="fullname">Full Name:</label>
+          <input class="widefield" id="fullname" type="text" name="fullname" required />
+        </div>
+
+        <div class="form-group">
+          <label for="useremail">Email:</label>
+          <input class="widefield" id="useremail" type="email" name="useremail" required />
+        </div>
+
+        <div class="form-group">
+         <label for="userphone">Phone:</label>
+         <input class="widefield" id="userphone" type="text" name="phone" required />
+       </div>
+
+       <p id="what-item">What items would you like to rent?</p>
+        <div class="form-group">
+         <label><input type="checkbox" name="rentalitem" value="land" /> Land</label>
+         <label><input type="checkbox" name="rentalitem" value="tools" /> Tools</label>
+         <label><input type="checkbox" name="rentalitem" value="classrooms" /> Classrooms</label>
+       </div>
+
+       <div class="form-group">
+         <label for="budget">Budget:</label>
+         <input class="widefield" id="budget" type="number" name="budget" required />
+       </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Comments:</label>
+          <textarea id="comments" name="comments"></textarea>
+        </div>
+          <button type="submit" onclick="formSubmit()">Submit</button>
+        </form>
+      </div>
+    </form>    
+  </main>
+  <!-- Main End -->
+  <!-- Footer Start -->
+    <footer>
+      <p>Please see <a href="./help.html">here</a> for other ways to help our cause!</p>
+    </footer>
+    <!-- Footer End -->
+    </div>
+    <script src="./scripts/javascript.js"></script>
+  </body>
+</html>
